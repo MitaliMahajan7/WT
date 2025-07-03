@@ -1,0 +1,228 @@
+<!-- Assignment No .: 3
+
+Assignment name=Implement a web page index.htm for any client website (e.g., a restaurant website project) using following:  
+HTML syntax: heading tags, basic tags and attributes, frames, tables, images, lists, links for text and images, forms etc.  
+Use of Internal CSS, Inline CSS, External CSS-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HealthCare Hospital</title>
+
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+  header {
+            background-color: #005b96;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin: 0;
+            color:coral;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #005b96;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+
+        .services-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .services-table th, .services-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .services-table th {
+            background-color: #005b96;
+            color: white;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #005b96;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #003f72;
+        }
+
+        .img-responsive {
+            width: 90%;
+            height: calc();
+        }
+        .container {
+            width:90%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.941);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+   
+    <header>
+        <h1>HealthCare Hospital</h1>
+        <marquee><h3>Your Health  , Our Priority</h3></marquee>
+    </header>
+
+  
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+   
+    <section id="home">
+        <center><h2>Welcome to HealthCare Hospital</h2></center>
+       <center><p>Your health is our top priority. We provide a range of healthcare services with state-of-the-art medical equipment and experienced professionals.</p></center>
+
+     
+        <a href="https://www.healthcarehospital.com">
+            <center><img src="hs1.jpg" alt="Hospital Image" class="img-responsive" width="500" height="500"></center>
+        </a>
+    </section>
+
+   
+    <section id="about">
+        <h2>About Us</h2>
+        <p>HealthCare Hospital has been serving the community for over 25 years. Our mission is to provide high-quality healthcare services that are affordable and accessible to all.</p>
+    </section>
+
+    
+    <section id="services">
+        <h2>Our Services</h2>
+        
+        
+        <table class="services-table">
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>General Consultation</td>
+                <td>Visit with our general practitioner for various health concerns.</td>
+                <td>$50</td>
+            </tr>
+            <tr>
+                <td>Emergency Care</td>
+                <td>Immediate attention for urgent health conditions.</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>Surgical Services</td>
+                <td>Comprehensive surgical care for various conditions.</td>
+                <td>$500+</td>
+            </tr>
+        </table>
+
+       
+        <h3>Additional Services</h3>
+        <ul>
+            <li>Laboratory Services</li>
+            <li>24/7 Emergency Room</li>
+            <li>Rehabilitation</li>
+            <li>Maternity Care</li>
+        </ul>
+    </section>
+
+   
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you need more information or wish to schedule an appointment, please fill out the contact form below:</p>
+        
+        
+        <form action="/submit-form" method="POST" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Your Full Name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email Address">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2025 HealthCare Hospital. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
