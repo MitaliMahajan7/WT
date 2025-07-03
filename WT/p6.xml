@@ -1,0 +1,45 @@
+<!-- Assignment No .: 6
+
+Assignment name=Write an XML file which will display the Book information which includes the following: 
+1)	Title of the book 
+2)	Author Name 
+3)	ISBN number 
+4)	Publisher name 
+5)	Edition 6) Price 
+
+<?xml version ="1.0" encoding="UTF-8"?>
+<bookinfo>
+    <book>
+    <tile>web technology</tile>
+    <author>poonam patil</author>
+    <isbn>09745574444</isbn>
+    <publisher>mariyam maniyar</publisher>
+    <edition>2nd</edition>
+    <prise>900.0 rs</prise>
+   </book>
+    <book>
+    <tile>pyhon programming</tile>
+    <author>harisha tank</author>
+    <isbn>98785574444</isbn>
+    <publisher>mariyam maniyar</publisher>
+    <edition>3nd</edition>
+     <prise>200.0 rs</prise>
+    </book>
+    <book>
+    <tile>database management system</tile>
+    <author></author>
+    <isbn>213745574444</isbn>
+    <publisher>vandana bagal</publisher>
+    <edition>2nd</edition>
+     <prise>700.0 rs</prise>
+    </book>
+    <book>
+    <tile>java</tile>
+    <author>nayana more</author>
+    <isbn>9865785574444</isbn>
+    <publisher>mariyam maniyar</publisher>
+    <edition>7nd</edition>
+     <prise>1200.0 rs</prise>
+    </book>
+    </bookinfo>
+-->

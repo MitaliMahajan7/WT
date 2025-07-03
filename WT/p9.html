@@ -1,0 +1,161 @@
+<!-- Assignment No .: 9
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Electricity Bill Calculator</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f3f5;
+            padding: 50px;
+        }
+
+        .container {
+            background-color: #fff;
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            background-color: #e6ffe6;
+            padding: 15px;
+            border: 1px solid #00cc66;
+            border-radius: 5px;
+            color: #006633;
+        }
+
+        .error {
+            margin-top: 20px;
+            background-color: #ffe6e6;
+            padding: 15px;
+            border: 1px solid #ff4d4d;
+            border-radius: 5px;
+            color: #cc0000;
+        }
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Electricity Bill Calculator</h2>
+
+<form method="post">
+<label for="units">Enter number of units:</label>
+<input type="number" name="units" id="units" required>
+<input type="submit" name="submit" value="Calculate">
+</form>
+
+<?php
+    function calculateBill($units) {
+        $bill = 0;
+
+        if ($units <= 50) {
+            $bill = $units * 3.50;
+        } elseif ($units <= 150) {
+
+            $bill = (50 * 3.50) + (($units - 50) * 4.00);
+        } elseif ($units <= 250) {
+            $bill = (50 * 3.50) + (100 * 4.00) + (($units - 150) * 5.20);
+        } else {
+            $bill = (50 * 3.50) + (100 * 4.00) + (100 * 5.20) + (($units - 250) * 6.50);
+        }
+
+        return $bill;
+    }
+
+    if (isset($_POST['submit'])) {
+        $units = $_POST['units'];
+        if (is_numeric($units) && $units > 0) {
+            $bill = calculateBill($units);
+            echo "<div class='result'><strong>Total bill for $units units:</strong> Rs. " . number_format($bill, 2) . "</div>";
+        } else {
+            echo "<div class='error'>Please enter a valid number of units.</div>";
+        }
+    }
+    ?>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Bill Calculator</title>
+</head>
+<body>
+    <h2>Electricity Bill Calculator</h2>
+    <form method="post" action="">
+        Enter Units Consumed:
+        <input type="number" name="units" required>
+        <input type="submit" name="submit" value="Calculate">
+    </form>
+
+    <?php
+    function calculateBill($units) {
+        $bill = 0;
+
+        if ($units <= 50) {
+            $bill = $units * 3.50;
+        } elseif ($units <= 150) {
+            $bill = 50 * 3.50 + ($units - 50) * 4.00;
+        } elseif ($units <= 250) {
+            $bill = 50 * 3.50 + 100 * 4.00 + ($units - 150) * 5.20;
+        } else {
+            $bill = 50 * 3.50 + 100 * 4.00 + 100 * 5.20 + ($units - 250) * 6.50;
+        }
+
+        return $bill;
+    }
+
+    if (isset($_POST['submit'])) {
+        $units = $_POST['units'];
+        $total = calculateBill($units);
+        echo "<h3>Total Units: $units</h3>";
+        echo "<h3>Total Bill: Rs. " . number_format($total, 2) . "</h3>";
+    }
+    ?>
+</body>
+</html>
+-->

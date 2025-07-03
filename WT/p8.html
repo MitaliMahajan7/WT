@@ -1,0 +1,85 @@
+<!-- Assignment No .: 8
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sum of Digits & Palindrome Checker</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+</style>
+</head>
+<body>
+<h2>Sum of Digits</h2>
+<div class="section">
+<form method="post">
+<input type="number" name="sum_input" required placeholder="Enter number for sum">
+<input type="submit" name="sum_submit" value="Calculate Sum">
+</form>
+
+</div>
+<h2>Palindrome Checker</h2>
+<div class="section">
+<form method="post">
+<input type="number" name="pal_input" required placeholder="Enter number to check palindrome">
+<input type="submit" name="pal_submit" value="Check Palindrome">
+</form>
+</div></body></html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP Digit Sum & Palindrome</title>
+</head>
+<body>
+    <h2>Check Digit Sum & Palindrome</h2>
+    <form method="post">
+        Enter a number: 
+        <input type="number" name="number" required>
+        <input type="submit" name="submit" value="Check">
+    </form>
+
+    <?php
+    if (isset($_POST["submit"])) {
+        $num = $_POST["number"];
+        $original = $num;
+
+        // Sum of digits
+        $sum = 0;
+        $temp = $num;
+        while ($temp > 0) {
+            $sum += $temp % 10;
+            $temp = (int)($temp / 10);
+        }
+
+        // Palindrome check
+        $reverse = strrev($num);
+        $isPalindrome = ($num == $reverse);
+
+        echo "<h3>Results:</h3>";
+        echo "Sum of digits of <b>$original</b> is: <b>$sum</b><br>";
+        if ($isPalindrome) {
+            echo "$original is a <b>Palindrome</b> number.";
+        } else {
+            echo "$original is <b>not</b> a Palindrome number.";
+        }
+    }
+    ?>
+</body>
+</html>
+-->

@@ -1,0 +1,129 @@
+<!-- Assignment No .: 7
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cricket Score (JSON & XML)</title>
+<style>
+        /* Overall body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('bat_ball.jpg'); /* Make sure the image path is correct */
+            background-size: cover; /* Ensures the image covers the entire page */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-attachment: fixed; /* Keeps the background fixed while scrolling */
+        }
+
+        /* Big heading styling */
+        h1 {
+            font-size: 48px;
+            color: #ff5733;
+            margin-top: 20px;
+        }
+
+        /* Styling for the scorecards */
+        #jsonScorecard, #xmlScorecard {
+            width: 320px;
+            margin: 30px auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            color: #fff; /* White text */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Scorecard title */
+        #jsonScorecard h1, #xmlScorecard h1 {
+            font-size: 24px;
+            color: #ffcc00; /* Gold color for titles */
+            margin-bottom: 15px;
+        }
+
+        /* Score display styling */
+        p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        /* Button styling */
+        button {
+            display: block;
+            width: 200px;
+            padding: 12px;
+            margin: 20px auto;
+            font-size: 18px;
+            background-color: #ffcc00; /* Gold background */
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #e6b800; /* Darker gold */
+        }
+
+</style>
+</head>
+<body>
+<h1>Cricket Score</h1>
+
+<div id="jsonScorecard">
+<h1>JSON Score</h1>
+<p>Runs: <span id="jsonRuns"></span></p>
+<p>Wickets: <span id="jsonWickets"></span></p>
+<p>Overs: <span id="jsonOvers"></span></p>
+</div>
+
+<button onclick="fetchJsonScore()">Fetch JSON Score</button>
+
+<div id="xmlScorecard">
+<h1>XML Score</h1>
+<p>Runs: <span id="xmlRuns"></span></p>
+<p>Wickets: <span id="xmlWickets"></span></p>
+<p>Overs: <span id="xmlOvers"></span></p>
+</div>
+
+<button onclick="fetchXmlScore()">Fetch XML Score</button>
+
+<script>
+        function fetchJsonScore() {
+            let jsonData = {
+                runs: Math.floor(Math.random() * 200),
+                wickets: Math.floor(Math.random() * 10),
+                overs: Math.floor(Math.random() * 50) + "." + Math.floor(Math.random() * 6)
+            };
+
+            document.getElementById("jsonRuns").textContent = jsonData.runs;
+            document.getElementById("jsonWickets").textContent = jsonData.wickets;
+            document.getElementById("jsonOvers").textContent = jsonData.overs;
+        }
+
+        function fetchXmlScore() {
+            let xmlString = `
+<score>
+<runs>${Math.floor(Math.random() * 200)}</runs>
+<wickets>${Math.floor(Math.random() * 10)}</wickets>
+<overs>${Math.floor(Math.random() * 50)}.${Math.floor(Math.random() * 6)}</overs>
+</score>
+            `;
+
+            let parser = new DOMParser();
+            let xmlDoc = parser.parseFromString(xmlString, "application/xml");
+
+            document.getElementById("xmlRuns").textContent = xmlDoc.querySelector("runs").textContent;
+            document.getElementById("xmlWickets").textContent = xmlDoc.querySelector("wickets").textContent;
+            document.getElementById("xmlOvers").textContent = xmlDoc.querySelector("overs").textContent;
+        }
+</script>
+</body>
+</html>
+
+-->
