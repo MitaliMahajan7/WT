@@ -1,0 +1,403 @@
+<!-- Assignment No .: 2
+Assignment name= Design the following static web pages required for an online book store web site 1) HOME PAGE: The static home page must contain three frames 
+2)	LOGIN PAGE 
+3)	CATOLOGUE PAGE: The catalogue page should contain the details of all the books available in the web site in a table 
+REGISTRATION PAGE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online Book Store</title>
+    <style>
+        body {
+                  background-image: url('bookstore.jpg');
+          }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 
+            padding : 
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #ecf0f1;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+</style>
+</head>
+<body>
+   <header>
+        <h1>Online Book Store</h1>
+    </header>
+        <nav>
+       
+        <a href="catalogue.html">Catalogue</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </nav>
+</body>
+</html>
+Catalouge page=
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store - Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .category {
+            margin-bottom: 20px;
+        }
+
+        .category h2 {
+            background-color: #555;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .books {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .book {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .book:hover {
+            transform: scale(1.05);
+        }
+
+        .book img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .book-details {
+            padding: 15px;
+        }
+
+        .book-details h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .book-details p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .price {
+            color: #d9534f;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Online Book Store</h1>
+    </header>
+
+    <div class="container">
+        <!-- Fiction Category -->
+        <div class="category">
+            <h2>Fiction</h2>
+            <div class="books">
+                <div class="book">
+                    <img src="adv.jpg" alt="Fiction Book 1">
+                    <div class="book-details">
+                        <h3>The Great Adventure</h3>
+                        <p>A thrilling novel of suspense and adventure.</p>
+                        <p class="price">$12.99</p>
+                    </div>
+                </div>
+                <div class="book">
+                    <img src="img2.jpg" alt="Fiction Book 2">
+                    <div class="book-details">
+                        <h3>Fictional Worlds</h3>
+                        <p>Explore the realm of fantastical storytelling.</p>
+                        <p class="price">$14.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Non-Fiction Category -->
+        <div class="category">
+            <h2>Non-Fiction</h2>
+            <div class="books">
+                <div class="book">
+                    <img src="img3.jpg" alt="Non-Fiction Book 1">
+                    <div class="book-details">
+                        <h3>The Art of Learning</h3>
+                        <p>Master the art of acquiring knowledge.</p>
+                        <p class="price">$19.99</p>
+                    </div>
+                </div>
+                <div class="book">
+                    <img src="img4.jpg" alt="Non-Fiction Book 2">
+                    <div class="book-details">
+                        <h3>Mindfulness</h3>
+                        <p>A practical guide to living in the moment.</p>
+                        <p class="price">$16.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mystery Category -->
+        <div class="category">
+            <h2>Mystery</h2>
+            <div class="books">
+                <div class="book">
+                    <img src="img9.jpg" alt="Mystery Book 1">
+                    <div class="book-details">
+                        <h3>The Hidden Clue</h3>
+                        <p>A gripping mystery that will keep you on edge.</p>
+                        <p class="price">$13.99</p>
+                    </div>
+                </div>
+                <div class="book">
+                    <img src="img6.jpg" alt="Mystery Book 2">
+                    <div class="book-details">
+                        <h3>The Last Witness</h3>
+                        <p>A story of crime and investigation.</p>
+                        <p class="price">$15.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Science Fiction Category -->
+        <div class="category">
+            <h2>Science Fiction</h2>
+            <div class="books">
+                <div class="book">
+                    <img src="img7.jpg" alt="Sci-Fi Book 1">
+                    <div class="book-details">
+                        <h3>Galactic Wars</h3>
+                        <p>Epic battles in a distant galaxy.</p>
+                        <p class="price">$18.99</p>
+                    </div>
+                </div>
+                <div class="book">
+                    <img src="img8.jpg" alt="Sci-Fi Book 2">
+                    <div class="book-details">
+                        <h3>The Last Colony</h3>
+                        <p>The future of humanity in a post-apocalyptic world.</p>
+                        <p class="price">$17.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+Register page=
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Online Book Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .register-container {
+            width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .register-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #34495e;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>Create an Account</h2>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+        </form>
+        <footer>
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
+Login page=
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .forgot-password {
+            text-align: center;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/submit-login" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required placeholder="Enter your username">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+            <button type="submit">Login</button>
+
+            <div class="forgot-password">
+                <a href="#">Forgot password?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
